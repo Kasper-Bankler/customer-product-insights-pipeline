@@ -26,7 +26,7 @@ The underlying SQLite database is modeled using a standard Star Schema optimized
 | Table Name | Type | Key Columns / Description |
 | :--- | :--- | :--- |
 | **Dim_Customer** | Dimension | `customer_id`, `customer_city`, `customer_state`, `Map_Location` |
-| **Dim_Product** | Dimension | `product_id`, `product_category_name` (Translated to English) |
+| **Dim_Product** | Dimension | `product_id`, `product_category_name` |
 | **Dim_Order** | Dimension | `order_id`, `order_status`, `purchase_timestamp` |
 | **Fact_OrderItem** | Fact | `order_item_id`, `order_id`, `product_id`, `customer_id`, `price`, `freight_value` |
 | **Fact_Review** | Fact | `review_id`, `order_id`, `review_score`, `ai_sentiment`, `ai_driver`, `processing_status` |
