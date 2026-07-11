@@ -12,7 +12,7 @@ graph TD
     A[Raw E-Commerce CSVs] -->|Extract| B(01_data_ingestion.py)
     B -->|Transform & Load| C[(SQLite3 Database)]
     C -->|Read Unprocessed Reviews| D(02_ai_enrichment.py)
-    D -->|Prompt Local LLM| E{Ollama: Gemma 4}
+    D -->|Prompt Local LLM| E{Gemma 4}
     E -->|JSON Sentiment & Driver| D
     D -->|Update Rows| C
     C -->|ODBC Connection| F[Power BI Dashboards]
@@ -63,3 +63,10 @@ This script establishes a connection to the local SQLite database, retrieves the
 ```bash
 python 02_ai_enrichment.py
 ```
+
+## Dashboard Showcase
+
+<p align="center">
+    <img width="1638" height="945" alt="Slide1" src="https://github.com/user-attachments/assets/68c8e10e-d7cd-4a5f-9088-90583934ebcc" alt="Commercial Overview Dashboard"/>
+    <img width="1638" height="945" alt="Slide2" src="https://github.com/user-attachments/assets/1738995b-aad6-425c-9903-2d654c94b06b" alt="AI Sentiment Analysis Dashboard"/>
+</p>
